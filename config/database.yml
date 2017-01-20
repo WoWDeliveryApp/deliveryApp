@@ -1,0 +1,22 @@
+default: &default
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  pool:     5
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
+
+staging:
+  <<: *default
+
+development:
+  <<: *default
+  database: app_delivery_development
+
+test:
+  <<: *default
+  database: app_delivery_test
+
+production:
+  <<: *default
+  database: app_delivery_production
