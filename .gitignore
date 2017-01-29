@@ -8,10 +8,31 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
+/db/*.sqlite2
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore tests and assets files
+/vendor/bundle/
+/vendor/ruby/
+/log/*
+/tmp/*
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/spec/tmp/*
+/capybara*
+/capybara-*.html
+
+# Ignore personal gems, sensitive data and assets imgs
+/gems
+.ruby-env
+.powenv
+.envrc
+public/uploads
+public/avatars
+public/assets
