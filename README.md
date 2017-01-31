@@ -26,7 +26,7 @@ export PGPASSWORD=XXXXX
 
 ```
 
-Dos requisitos basicos para iniciar el proyecto son la gema `bundler` y [Ruby](https://rvm.io/rvm/upgrading) `~> 2.3.0`. Para instalar bundler: 
+Dos requisitos basicos para iniciar el proyecto son la gema `bundler` y [Ruby](https://rvm.io/rvm/upgrading) `~> 2.3.3`. Para instalar bundler: 
 
 ```sh
 gem install bundler
