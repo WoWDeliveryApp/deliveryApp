@@ -12,7 +12,7 @@ No se admiten Push to Master por cuestiones de calidad de desarrollo, en general
 - Escribir el codigo dependiendo del Issue que vaya a desarrollar
 - Abrir un Pull Request pidiendo la combinacion de esta branch con Master
 - Los lideres tecnicos revisan el codigo
-- Si necesita cambios se colocan en el Issue, se corriguen y luego se combina.
+- Si necesita cambios se colocan en el Issue, se corrigen y luego se combina.
 - Todos quedamos Felices :) 
 
 #### Configuracion
