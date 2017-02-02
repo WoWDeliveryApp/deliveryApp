@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Company, type: :model do
-  let!(:company) { FactoryGirl.create(:company) }
+  let(:company) { FactoryGirl.create(:company) }
   subject { company }
 
   it { is_expected.to belong_to :user }
