@@ -17,6 +17,7 @@
 /tmp
 
 # Ignore tests and assets files
+/spec/examples.txt
 /vendor/bundle/
 /vendor/ruby/
 /log/*
