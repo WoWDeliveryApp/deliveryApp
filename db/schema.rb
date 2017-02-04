@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202171245) do
+ActiveRecord::Schema.define(version: 20170204035125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,32 @@ ActiveRecord::Schema.define(version: 20170202171245) do
   end
 
   add_index "companies", ["user_id"], name: "index_companies_on_user_id", using: :btree
+
+  create_table "deliveries", force: :cascade do |t|
+    t.boolean  "accepted"
+    t.boolean  "delivered"
+    t.boolean  "refused"
+    t.string   "description"
+    t.integer  "order_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "deliveries", ["order_id"], name: "index_deliveries_on_order_id", using: :btree
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.float    "price"
+    t.string   "description"
+    t.datetime "time"
+    t.integer  "order_id"
+    t.integer  "company_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "menus", ["company_id"], name: "index_menus_on_company_id", using: :btree
+  add_index "menus", ["order_id"], name: "index_menus_on_order_id", using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.integer  "invoice"
@@ -63,6 +89,9 @@ ActiveRecord::Schema.define(version: 20170202171245) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "companies", "users"
+  add_foreign_key "deliveries", "orders"
+  add_foreign_key "menus", "companies"
+  add_foreign_key "menus", "orders"
   add_foreign_key "orders", "companies"
   add_foreign_key "orders", "users"
 end
