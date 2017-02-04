@@ -5,6 +5,9 @@ RSpec.describe User, type: :model do
 
   it { is_expected.to respond_to(:name) }
   it { is_expected.to respond_to(:address) }
+  it { is_expected.to have_many(:companies) }
+  it { is_expected.to have_many(:orders) }
+  it { is_expected.to have_many(:deliveries).through(:orders) }
   
   it 'set the api_token' do
     expect(user.api_token).to be_present

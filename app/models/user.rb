@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
     deliveryman: 1
   }
 
+  has_many :companies
+  has_many :orders
+  has_many :deliveries, through: :orders
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
