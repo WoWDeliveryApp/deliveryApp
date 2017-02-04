@@ -7,6 +7,7 @@ RSpec.describe Menu, type: :model do
   it { is_expected.to respond_to :price }
   it { is_expected.to respond_to :description }
   it { is_expected.to respond_to :time }
+  it { is_expected.to respond_to :type_menu }
   it { is_expected.to belong_to :order }
   it { is_expected.to belong_to :company }
 end
