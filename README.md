@@ -37,7 +37,8 @@ Tambien sera necesario tener `PostgreSQL 9.5`.
 Una vez todo lo anterior este instalado y/o configurado, procederemos a escribir el siguente comando en la consola para crear nuestra base de datos y poder correr nuestra APP Web de desarrollo.
 
 ```sh
-rake db:create
+rake db:setup
+rspec spec
 ```
 
 ### Licencia
