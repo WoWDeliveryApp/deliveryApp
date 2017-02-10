@@ -27,6 +27,7 @@ gem 'foundation-icons-sass-rails'
 gem 'neat', '~> 1.8.0'
 gem 'gravtastic'
 gem 'font-awesome-rails'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # Helpers for meta tags
 gem 'meta-tags'
