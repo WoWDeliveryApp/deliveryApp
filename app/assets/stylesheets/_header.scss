@@ -17,7 +17,9 @@ header {
 }
 
 .logo{
-	display: flex;
+	a{
+		display: flex;
+	}
 	div{
 		padding: 0;
 	}
@@ -39,9 +41,10 @@ header {
 		display: block;
 		padding: .5rem;
 		&:hover{
-			text-decoration: none;
 			background: rgba(white, .4);
-			transform: scale(1.1);
+			p:nth-child(1){
+				transform: scale(1.05);
+			}	
 		}
 	}
 	div{
@@ -60,6 +63,9 @@ header {
 }
 
 .food, .help{
+	p{
+		font-weight: bold;
+	}
 	p:nth-child(1){
 		text-transform: uppercase;
 		font-size: 1.1rem;
@@ -76,7 +82,6 @@ header {
 		border-bottom: .2rem solid transparent;
 		margin-right: .5rem;
 		&:hover{
-			text-decoration: none;
 			background: none;
 			border-bottom: .2rem solid white;
 			color: white;

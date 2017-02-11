@@ -1,9 +1,10 @@
 %header
 	.col-xs-12.col-md-4.logo
-		.col-xs-12.col-md-3
-			= image_tag 'ToGOjp.png'
-		.col-xs-12.col-md-9
-			%p ToGoDelivery.com
+		= link_to root_path do
+			.col-xs-12.col-md-3
+				= image_tag 'ToGOjp.png'
+			.col-xs-12.col-md-9
+				%p ToGoDelivery.com
 	%nav.col-xs-12.col-md-4.menu
 		.col-xs-12.col-md-6
 			%a(href="#" title="Fast Food" class="food")
