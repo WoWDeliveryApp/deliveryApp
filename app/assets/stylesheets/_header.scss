@@ -1,0 +1,94 @@
+p, a{
+	color: white;
+	text-decoration: none;
+	transition: all 1s;
+	font-family: $primary-font-family;
+}
+
+header {
+	background: $panther;
+	width: $total_container;
+	padding: 1rem;
+	border-bottom: .7rem solid rgba(white, .4);
+	display: flex;
+	img{
+		max-width: 100%;
+	}
+}
+
+.logo{
+	display: flex;
+	div{
+		padding: 0;
+	}
+	p{
+		margin-top: 3rem;
+		margin-left: .5rem;
+	}
+}
+
+.menu{
+	margin-top: -1rem;
+	display: flex;
+	padding: 0;
+	p{
+		margin: 0 auto;
+	}
+	a{
+		position: relative;
+		display: block;
+		padding: .5rem;
+		&:hover{
+			text-decoration: none;
+			background: rgba(white, .4);
+			transform: scale(1.1);
+		}
+	}
+	div{
+		padding: 0;
+	}
+	.app{
+		i{
+			font-size: 3rem;
+		}	
+	}
+	.login{
+		i{
+			font-size: 2rem;
+		}
+	}
+}
+
+.food, .help{
+	p:nth-child(1){
+		text-transform: uppercase;
+		font-size: 1.1rem;
+	}
+}
+
+.right{
+	margin-top: 0;
+	align-items: flex-end;
+	a{
+		text-align: center;
+		font-size: 1.2rem;
+		padding: 0;
+		border-bottom: .2rem solid transparent;
+		margin-right: .5rem;
+		&:hover{
+			text-decoration: none;
+			background: none;
+			border-bottom: .2rem solid white;
+			color: white;
+		}
+		&:before{
+			content: '';
+		    width: 1px;
+		    height: 1.8rem;
+		    position: absolute;
+		    left: 0;
+		    background: white;
+		    bottom: .3rem;
+		}
+	}
+}

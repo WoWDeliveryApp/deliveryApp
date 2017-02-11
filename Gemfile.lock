@@ -156,6 +156,8 @@ GEM
     ffi (1.9.17)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
@@ -493,6 +495,7 @@ DEPENDENCIES
   activeadmin!
   better_errors
   bootstrap (~> 4.0.0.alpha6)
+  bourbon
   brakeman
   bugsnag
   byebug
@@ -503,6 +506,7 @@ DEPENDENCIES
   factory_girl_rails
   faker (~> 1.7.1)
   font-awesome-rails
+  font-awesome-sass
   foundation-icons-sass-rails
   foundation-rails (~> 6.1.2.0)
   gravtastic
@@ -554,4 +558,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.13.7
+   1.14.3
