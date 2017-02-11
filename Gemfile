@@ -16,6 +16,7 @@ gem 'activeadmin', github: 'activeadmin' # Admin interface
 gem 'active_admin_theme' # Theme up activeadmin a bit, flatter
 gem 'devise'          # authentication
 gem 'sidekiq'        # background jobs
+gem 'puma' # webserver
 gem 'skywalker'
 
 ## Asset bits
