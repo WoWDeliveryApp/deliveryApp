@@ -56,6 +56,7 @@ group :development, :test do
   gem 'pry'
   gem 'factory_girl_rails'
   gem 'faker', '~> 1.7.1'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'shoulda-callback-matchers', '~> 1.1.1'
