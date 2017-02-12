@@ -156,6 +156,8 @@ GEM
     ffi (1.9.17)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
@@ -353,6 +355,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -494,6 +500,7 @@ DEPENDENCIES
   activeadmin!
   better_errors
   bootstrap (~> 4.0.0.alpha6)
+  bourbon
   brakeman
   bugsnag
   byebug
@@ -504,6 +511,7 @@ DEPENDENCIES
   factory_girl_rails
   faker (~> 1.7.1)
   font-awesome-rails
+  font-awesome-sass
   foundation-icons-sass-rails
   foundation-rails (~> 6.1.2.0)
   gravtastic
@@ -527,6 +535,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.2.7.1)
   rails_12factor
+  rspec
   rspec-rails
   rubocop
   sass-rails (~> 5.0.6)
@@ -556,4 +565,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.13.7
+   1.14.3

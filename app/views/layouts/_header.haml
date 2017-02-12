@@ -1,3 +1,26 @@
-.header
-  = link_to 'Login', new_user_session_path
-  = link_to 'Logout', destroy_user_session_path, method: :delete if current_user
+%header
+	.col-xs-12.col-md-4.logo
+		= link_to root_path do
+			.col-xs-12.col-md-3
+				= image_tag 'ToGOjp.png'
+			.col-xs-12.col-md-9
+				%p ToGoDelivery.com
+	%nav.col-xs-12.col-md-4.menu
+		.col-xs-12.col-md-6
+			%a(href="#" title="Fast Food" class="food")
+				%p ¿Hambre?
+				%p ¡Comida a Domicilio!
+		.col-xs-12.col-md-6
+			%a(href="#" title="How it Works?" class="help")
+				%p ¿Necesita Ayuda?
+				%p ¿como funciona?
+	%nav.col-xs-12.col-md-4.menu.right
+		.col-xs-12.col-md-4.app
+			%a(href="#" title="How it Works?") 
+				%i.fa.fa-mobile
+				ToGO App
+		.col-xs-12.col-md-5.login
+			= link_to new_user_session_path do
+				%i.fa.fa-user-o
+				Login/SignUp
+			= link_to 'Logout', destroy_user_session_path, method: :delete if current_user

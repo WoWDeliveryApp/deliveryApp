@@ -1,7 +1,20 @@
-/*Bootstrap here or wherever you want*/
+/*Requeriments*/
+@import "bourbon";
+@import "neat";
 @import "bootstrap"; 
-@import "./visitors";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "variables";
+@import "header";
+@import "home";
+@import "footer";
 
-.header {
-  margin-top: 2rem;
+ul, li{
+	list-style: none;
+}
+
+a{
+	&:hover{
+		text-decoration: none;
+	}
 }

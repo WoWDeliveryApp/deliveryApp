@@ -1,0 +1,28 @@
+.container{
+	height: 35rem;
+	width: $total_container;
+	background-color: $panther;
+	background-image: asset_url("index/home_back.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	padding: 4rem;
+	img{
+		max-width: 100%;
+	}
+}
+
+.slogan{
+	display: flex;
+	align-items: center;
+	p{
+		font-size: 6.5rem;
+		font-family: $third-font-family;
+		text-shadow: 3px 4px 5px $panther;
+		@include media($lg){
+			font-size: 5.5rem;
+		}
+	}
+}
