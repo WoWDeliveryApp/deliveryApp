@@ -62,7 +62,7 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'shoulda-callback-matchers', '>= 1.1.0', '< 1.1.4'
+  gem 'shoulda-callback-matchers', '~> 1.1.1'
   gem 'stripe-ruby-mock', '~> 2.1.1', require: 'stripe_mock'
   gem 'spinach-rails'
 end
