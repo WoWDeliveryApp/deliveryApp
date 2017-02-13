@@ -2,7 +2,7 @@ language: ruby
 rvm: 
 - 2.3.3
 before_install:
- - rvm @default,@global do gem uninstall bundler -v 1.13.7 -x
+ - rvm @default,@global do gem uninstall bundler -v 1.14.4 -x
  - gem install bundle --version '~> 1.13.7'
  - bundle --version
 script:
@@ -13,7 +13,7 @@ cache: bundler
 services:
   - postgresql
 addons:
-  postgresql: '9.5'
+  postgresql: '9.4'
 notificatations:
   slack: 
     rooms:
