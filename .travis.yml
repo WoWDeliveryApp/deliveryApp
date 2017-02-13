@@ -1,9 +1,10 @@
 language: ruby
 rvm: 
 - 2.3.3
-bundler_args: --jobs=2
 before_install:
-  - gem install bundler -v 1.13.7
+ - rvm @default,@global do gem uninstall bundler -v 1.13.7 -x
+ - gem install bundle --version '~> 1.13.7'
+ - bundle --version
 script:
   - bundle exec rake db:reset
   - bundle exec rake spec
