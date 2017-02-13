@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # This gem seems neccesary for works well on Travis CI 
 gem 'rainbow', '>= 2.1.0', '< 2.2.0'
+gem 'shoulda-callback-matchers', '~> 1.1.4'
 
 group :development do
   gem 'pre-commit', require: false
@@ -62,7 +63,7 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'shoulda-callback-matchers', '~> 1.1.1'
+  gem 'shoulda-callback-matchers', '~> 1.1.4'
   gem 'stripe-ruby-mock', '~> 2.1.1', require: 'stripe_mock'
   gem 'spinach-rails'
 end
