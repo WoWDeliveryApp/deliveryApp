@@ -1,0 +1,14 @@
+language: ruby
+rvm: 
+- 2.3.3
+bundler_args: --jobs=2
+script:
+script:
+  - bundle exec rake db:reset
+  - bundle exec rake spec
+  - bundle exec rake spinach
+cache: bundler
+services:
+  - postgresql
+addons:
+  postgresql: '9.5'
