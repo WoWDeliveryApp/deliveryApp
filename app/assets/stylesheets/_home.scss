@@ -1,12 +1,9 @@
-.main_container{
+.container{
 	background-color: $panther;
 	background-image: asset_url("index/home_back.jpg");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-}
-
-.container{
 	border: 1px solid black;
 	width: $total_container;
 	display: flex;
