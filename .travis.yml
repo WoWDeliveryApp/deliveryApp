@@ -2,7 +2,8 @@ language: ruby
 rvm: 
 - 2.3.3
 bundler_args: --jobs=2
-script:
+before_install:
+  - gem install bundler -v 1.13.7
 script:
   - bundle exec rake db:reset
   - bundle exec rake spec
