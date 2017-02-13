@@ -13,4 +13,4 @@ services:
 addons:
   postgresql: '9.5'
 notificatations:
-  slack: togodeliveryapp:9NMcWbSV1NpZZ6TOre3KLVuL
+  slack: togodeliveryapp:9NMcWbSV1NpZZ6TOre3KLVuL#general
