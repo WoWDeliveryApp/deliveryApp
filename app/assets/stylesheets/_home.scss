@@ -1,14 +1,18 @@
-.container{
-	height: 35rem;
-	width: $total_container;
+.main_container{
 	background-color: $panther;
 	background-image: asset_url("index/home_back.jpg");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+}
+
+.container{
+	border: 1px solid black;
+	width: $total_container;
 	display: flex;
 	align-items: center;
 	padding: 4rem;
+	height: 100%;
 	img{
 		max-width: 100%;
 	}

@@ -11,6 +11,9 @@ header {
 	padding: 1rem;
 	border-bottom: .7rem solid rgba(white, .4);
 	display: flex;
+	position: absolute;
+	top: 0;
+	z-index: 99999;
 	img{
 		max-width: 100%;
 	}
@@ -42,9 +45,6 @@ header {
 		padding: .5rem;
 		&:hover{
 			background: rgba(white, .4);
-			p:nth-child(1){
-				transform: scale(1.05);
-			}	
 		}
 	}
 	div{
