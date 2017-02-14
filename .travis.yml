@@ -14,7 +14,5 @@ services:
   - postgresql
 addons:
   postgresql: '9.4'
-notificatations:
-  slack: 
-    rooms:
-      - togodeliveryapp:9NMcWbSV1NpZZ6TOre3KLVuL#general
+notifications:
+  slack: togodeliveryapp:GsHa398GYlXNi1pYMs9ckqBO#general
