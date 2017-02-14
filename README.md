@@ -1,4 +1,5 @@
 ## ToGO!
+[![Build Status](https://travis-ci.org/WoWDeliveryApp/deliveryApp.svg?branch=master)](https://travis-ci.org/WoWDeliveryApp/deliveryApp)
 
 Esta es una APP dedicada al envio de comida a domicilio de acuerdo a los restaurantes registrados en ella, donde ademas el que hace el envio es el mismo usuario afiliado a la aplicacion, todos en concreto salen beneficiados. Proximamente en desarrollo para su disponibilidad en Web, Android y iOS.
 
@@ -39,6 +40,7 @@ Una vez todo lo anterior este instalado y/o configurado, procederemos a escribir
 ```sh
 rake db:setup
 rspec spec
+spinach features
 ```
 
 ### Licencia
