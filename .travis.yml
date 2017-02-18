@@ -1,0 +1,18 @@
+language: ruby
+rvm: 
+- 2.3.3
+before_install:
+ - rvm @global do gem uninstall bundler -v 1.14.4 -x
+ - rvm @global do gem install bundler -v 1.13.7
+ - bundle --version
+script:
+  - bundle exec rake db:reset
+  - bundle exec rake spec
+  - bundle exec rake spinach
+cache: bundler
+services:
+  - postgresql
+addons:
+  postgresql: '9.4'
+notifications:
+  slack: togodeliveryapp:GsHa398GYlXNi1pYMs9ckqBO#general

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 #ruby version
 ruby "~> 2.3.3"
 
+
 gem 'rails', '4.2.7.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0.6'
@@ -38,6 +39,10 @@ gem 'meta-tags'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# This gem seems neccesary for works well on Travis CI 
+gem 'rainbow', '>= 2.1.0', '< 2.2.0'
+# This is our free bug tracker
+gem 'rollbar'
 
 group :development do
   gem 'pre-commit', require: false

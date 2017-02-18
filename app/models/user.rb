@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   ### API Token-related bits
   ApiTokenLengthError = Class.new StandardError
+  validates :address, presence: true
   validates :api_token, uniqueness: true
   before_create :generate_api_token!
 
