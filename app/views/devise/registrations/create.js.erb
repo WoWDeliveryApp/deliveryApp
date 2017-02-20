@@ -1,0 +1,8 @@
+<% if @user.valid? %>
+  $('input[name=commit]').prop('disabled', true)
+  $('#errors').html("")
+  $('#new-user').html("<%= 'Su cuenta ha sido creada' %>")
+<% else %>
+  $('input[name=commit]').prop('disabled', false)
+  $('#errors').html("<%= escape_javascript (render partial: 'new_user_errors', locals: { errors: @user.errors.full_messages }) %>")
+<% end %>
