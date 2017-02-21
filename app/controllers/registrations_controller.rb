@@ -1,6 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-before_action :configure_sign_up_params, only: [:create]
-before_action :configure_account_update_params, only: [:update]
+before_action :authenticate_user!, only: [:update]
 
   # GET /resource/sign_up
   def new
@@ -9,7 +8,7 @@ before_action :configure_account_update_params, only: [:update]
 
   # POST /resource
   def create
-    @user = build_resource(configure_sign_up_params)
+    @user = build_resource(user_signup_params)
     respond_to do |format|
       if @user.save
         sign_in(@user)
@@ -25,7 +24,13 @@ before_action :configure_account_update_params, only: [:update]
 
   # PUT /resource
   def update
-    super
+    @user = current_user
+    if params[:first_role]
+      @user.update(role: params[:first_role])
+      redirect_to root_path
+    else
+      super
+    end
   end
 
   # DELETE /resource
@@ -44,8 +49,7 @@ before_action :configure_account_update_params, only: [:update]
 
   protected
 
-  # If you have extra params to permit, append them to the sanitizer.
-  def configure_sign_up_params
+  def user_signup_params
     params.require(:user).permit(
       :name, 
       :address,
@@ -56,8 +60,15 @@ before_action :configure_account_update_params, only: [:update]
   end
 
   # If you have extra params to permit, append them to the sanitizer.
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:attribute, :name, :address])
+  def user_update_params
+    params.require(:user).permit(
+      :name,
+      :role,
+      :address,
+      :email,
+      :password,
+      :password_confirmation
+    )
   end
 
   # The path used after sign up.

@@ -1,6 +1,7 @@
 <% if @user.valid? %>
   $('#errors').html("")
   $('#new-user').html("<%= 'Su cuenta ha sido creada exitosamente' %>")
+  $('#new-user').append("<%= escape_javascript (render partial: 'new_user_modal', locals: { user: @user }) %>")
 <% else %>
   $('#errors').html("<%= escape_javascript (render partial: 'new_user_errors', locals: { errors: @user.errors.full_messages }) %>")
 <% end %>

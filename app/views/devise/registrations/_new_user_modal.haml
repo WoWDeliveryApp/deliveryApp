@@ -1,0 +1,9 @@
+%br
+= link_to '/users?first_role=restaurant', method: :put, class: 'img-role' do
+  = image_tag 'restaurant.jpg', alt: 'Restaurant'
+
+= link_to '/users?first_role=deliveryman', method: :put, class: 'img-role' do 
+  = image_tag 'delivery.jgp', alt: 'Delivery'
+
+= link_to root_path, class: 'img-role' do 
+  %h3 Continua como un customer
