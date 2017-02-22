@@ -1,17 +1,21 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.pure-u-1.login-container
+  .pure-u-1.pure-u-lg-1-2.login-section
+    = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "login-form pure-u-1 pure-u-lg-4-5 pure-form pure-form-stacked"}) do |f|
+      .login-field.pure-u-lg-3-5
+        = f.label :email, :class => "pure-u-1 login-label"
+        = f.email_field :email, autofocus: true, :class => "pure-u-1"
+      .login-field.pure-u-lg-3-5
+        = f.label :password, :class => "pure-u-1 login-label"
+        = f.password_field :password, autocomplete: "off", :class => "pure-u-1"
+      - if devise_mapping.rememberable?
+        .login-field.pure-u-lg-3-5
+          = f.check_box :remember_me, :class => "pure-u-1-12 remember-checkbox"
+          = f.label :remember_me, :class => "pure-u-4-5 remember-label"
+        .login-field.pure-u-lg-3-5
+          = render "devise/shared/links"
+      .login-submit.pure-u-lg-3-5
+        = f.submit "Log in", :class => "pure-button pure-u-1"
+  .pure-u-1.pure-u-lg-1-2.login-section.signup
+    .pure-u-1.pure-u-lg-4-5.login-marketing
+      %h2 No tiene una cuenta? ¡créala!
+      = link_to "Sign up", new_registration_path(resource_name), :class => "pure-u-lg-1-2 pure-u-1"

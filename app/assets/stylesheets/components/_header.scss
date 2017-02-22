@@ -1,9 +1,14 @@
-header{
+.main-header{
 	background: $panther;
 	border-bottom: .5rem solid rgba(white, .2);
+	display: none;
 	padding: 1% 4%;
 	position: absolute;
 	width: $total-container;
+	z-index: 999;
+	@include lg{
+		display: block;
+	}
 }
 
 .header-logo{
@@ -58,4 +63,11 @@ header{
 	    width: .1rem;
   	}
   }
+}
+
+.mobile-header{
+	display: block;
+	@include lg{
+		display: none;
+	}
 }

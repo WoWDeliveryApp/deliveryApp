@@ -1,9 +1,12 @@
 footer{
 	background: $panther;
-	bottom: 0;
 	padding: 0 5%;
-	position: absolute;
 	width: $total-container;
+	z-index: 999;
+	@include lg{
+		bottom: 0;
+		position: absolute;
+	}
 }
 
 .sitemap-links{

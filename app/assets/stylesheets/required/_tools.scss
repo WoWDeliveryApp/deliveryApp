@@ -36,6 +36,8 @@
   }
 }
 
+//recipe layouts
+
 @mixin total-recipe {
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,11 +45,30 @@
   height: 100vh;
 };
 
+@mixin transparent-back {
+  &:before{
+    background: white; 
+    content: '';
+    height: 100%;
+    opacity: .2;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+};
+
+
+//slogan layout
+
 @mixin slogan {
   color: white;
   font-family: $third-font-family;
   text-shadow: 1px 1px 5px $panther;
 };
+
+
+
+//common hovers
 
 @mixin hover-dark {
   &:hover{
