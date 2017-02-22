@@ -14,7 +14,7 @@ class Spinach::Features::IndexNavigate < Spinach::FeatureSteps
   end
 
   step 'I should a message in the page center' do
-    expect(page).to have_css('.container')
+    expect(page).to have_css('.home-slogan')
     expect(page).to have_content('delivery al alcance de tu mano')
   end
 
