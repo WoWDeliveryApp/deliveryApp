@@ -36,8 +36,34 @@
   }
 }
 
-header{
-	@include xs() {
-		background: $panther;
-	}
-}
+@mixin total-recipe {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+};
+
+@mixin slogan {
+  color: white;
+  font-family: $third-font-family;
+  text-shadow: 1px 1px 5px $panther;
+};
+
+@mixin hover-dark {
+  &:hover{
+    color: rgba(white, .5);
+  }
+};
+
+@mixin hover-darkbox {
+  &:hover{
+    background-color: rgba(white, .2);
+    transition: all 1s;
+  }
+};
+
+@mixin hover-light {
+  &:hover{
+    color: rgba(white, 1);
+  }
+};

@@ -1,0 +1,50 @@
+// ========== Fonts ==========
+@font-face {
+  font-family: 'myriadpro';
+  src: url(font-path('MyriadPro-Regular.eot'));
+  src: url(font-path('MyriadPro-Regular.eot')),
+       url(font-path('MyriadPro-Regular.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('MyriadPro-Regular.woff2')) format('woff2'),
+       url(font-path('MyriadPro-Regular.woff')) format('woff'),
+       url(font-path('MyriadPro-Regular.ttf'))  format('truetype'),
+       url(font-path('MyriadPro-Regular.svg') + "#myriadpro") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'belacu';
+  src: url(font-path('belacu/BELACU.eot'));
+  src: url(font-path('belacu/BELACU.eot')),
+       url(font-path('belacu/BELACU.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('belacu/BELACU.woff2')) format('woff2'),
+       url(font-path('belacu/BELACU.woff')) format('woff'),
+       url(font-path('belacu/BELACU.ttf'))  format('truetype'),
+       url(font-path('belacu/BELACU.svg') + "#belacu") format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+$primary-font-family: Helvetica, Arial, sans-serif;
+$secondary-font-family: 'myriadpro', Helvetica, sans-serif;
+$third-font-family: 'belacu', Helvetica, sans-serif;
+$medium-font-size: 0.75rem;
+$small-font-size: 0.5rem;
+
+// ========== Bourbon Breakpoints ==========
+
+$xs: 20em;
+$x-sm: 30em;
+$sm: 35.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 80em;
+
+// ========== Colours ==========
+
+$panther: #111820;
+
+$total-container: 100%;
+$big-container: 75%;
+$medium-container: 50%;
+$small-container: 25%;

@@ -12,3 +12,8 @@
 
 /*Especific Styles*/
 @import "layouts/home";
+
+.page-container {
+	position: relative;
+	overflow: hidden;
+}
