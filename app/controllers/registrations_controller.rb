@@ -81,3 +81,4 @@ before_action :authenticate_user!, only: [:update]
     super(resource)
   end
 end
+
