@@ -1,0 +1,20 @@
+.home-recipe{
+	@include total-recipe();
+	align-items: center;
+	background-image: url("index/home_back.jpg");
+	display: flex;
+	padding: 0 5%;
+}
+
+.home-container{
+	margin-top: 5%;
+}
+
+.home-slogan{
+	p{
+		@include slogan();
+		font-size: 6rem;
+		margin-left: 5%;
+		text-shadow: .1rem 0 0 black, .1rem 0 0 black, .1rem 0 0 black, .1rem 0 0 black;
+	}
+}

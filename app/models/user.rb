@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
 
   enum role: {
     customer: 0,
-    deliveryman: 1
+    deliveryman: 1,
+    restaurant: 2
   }
 
   has_many :companies

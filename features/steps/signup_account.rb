@@ -25,6 +25,6 @@ class Spinach::Features::SignupAccount < Spinach::FeatureSteps
   end
 
   step 'I should see a message that say "Bienvenido! Te has registrado correctamente."' do
-    expect(page).to have_content('Bienvenido! Te has registrado correctamente.')
+    expect(page).to have_content('Su cuenta ha sido creada exitosamente')
   end
 end

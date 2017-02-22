@@ -26,12 +26,10 @@ gem 'haml'
 gem "haml-rails", "~> 0.9"
 gem 'foundation-rails', '~> 6.1.2.0'
 gem 'foundation-icons-sass-rails'
-gem 'neat', '~> 1.8.0'
 gem 'gravtastic'
-gem 'bourbon'
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'purecss-sass', '~> 0.6.2'
 
 # Helpers for meta tags
 gem 'meta-tags'
