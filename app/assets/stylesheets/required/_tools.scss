@@ -1,0 +1,43 @@
+// Media Queries
+
+@mixin xs {
+  @media (min-width: #{$xs}) {
+    @content;
+  }
+}
+
+@mixin x-sm {
+  @media (min-width: #{$x-sm}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+header{
+	@include xs() {
+		background: $panther;
+	}
+}

@@ -1,20 +1,14 @@
 /*Requeriments*/
-@import "bourbon";
-@import "neat";
-@import "bootstrap"; 
+@import 'purecss';
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "variables";
-@import "header";
-@import "home";
-@import "footer";
+@import "required/variables";
+@import "required/tools";
+@import "required/base";
+@import "required/helpers";
+@import "components/header";
+@import "components/footer";
 
-ul, li{
-	list-style: none;
-}
 
-a{
-	&:hover{
-		text-decoration: none;
-	}
-}
+/*Especific Styles*/
+@import "layouts/home";

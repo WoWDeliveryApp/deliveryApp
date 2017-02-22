@@ -1,25 +1,25 @@
-%header
-	.col-xs-12.col-md-4.logo
+%header.pure-g
+	.header-logo.pure-u-lg-1-4
 		= link_to root_path do
-			.col-xs-12.col-md-3
+			.pure-u-lg-1-3
 				= image_tag 'ToGOjp.png'
-			.col-xs-12.col-md-9
+			.pure-u-1-2
 				%p ToGoDelivery.com
-	%nav.col-xs-12.col-md-4.menu
-		.col-xs-12.col-md-6
+	%nav.menu-center.pure-u-lg-1-2
+		.pure-u-lg-1-3
 			%a(href="#" title="Fast Food" class="food")
 				%p ¿Hambre?
 				%p ¡Comida a Domicilio!
-		.col-xs-12.col-md-6
+		.pure-u-lg-1-3
 			%a(href="#" title="How it Works?" class="help")
 				%p ¿Necesita Ayuda?
 				%p ¿como funciona?
-	%nav.col-xs-12.col-md-4.menu.right
-		.col-xs-12.col-md-4.app
+	%nav.menu-right.pure-u-lg-1-4
+		.header-app.pure-u-lg-1-3
 			%a(href="#" title="How it Works?") 
 				%i.fa.fa-mobile
 				ToGO App
-		.col-xs-12.col-md-5.login
+		.header-login.pure-u-lg-1-3
 			= link_to new_user_session_path do
 				%i.fa.fa-user-o
 				Login/SignUp
