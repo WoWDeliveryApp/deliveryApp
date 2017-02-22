@@ -1,0 +1,90 @@
+// Media Queries
+
+@mixin xs {
+  @media (min-width: #{$xs}) {
+    @content;
+  }
+}
+
+@mixin x-sm {
+  @media (min-width: #{$x-sm}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+//recipe layouts
+
+@mixin total-recipe {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+};
+
+@mixin transparent-back {
+  &:before{
+    background: white; 
+    content: '';
+    height: 100%;
+    opacity: .2;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+};
+
+
+//slogan layout
+
+@mixin slogan {
+  color: white;
+  font-family: $third-font-family;
+  text-shadow: 1px 1px 5px $panther;
+};
+
+
+
+//common hovers
+
+@mixin hover-dark {
+  &:hover{
+    color: rgba(white, .5);
+  }
+};
+
+@mixin hover-darkbox {
+  &:hover{
+    background-color: rgba(white, .2);
+    transition: all 1s;
+  }
+};
+
+@mixin hover-light {
+  &:hover{
+    color: rgba(white, 1);
+  }
+};

@@ -1,0 +1,29 @@
+footer{
+	background: $panther;
+	padding: 0 5%;
+	width: $total-container;
+	z-index: 999;
+	@include lg{
+		bottom: 0;
+		position: absolute;
+	}
+}
+
+.sitemap-links{
+	margin: 1rem auto;
+	@include lg{
+		width: auto;
+		margin-right: 5%;
+	}
+	ul{
+		margin: 2% auto;
+	}
+	> a{
+		font-size: 1.2rem;
+		@include hover-dark();
+	}
+	.link a{
+		color: rgba(white, .6);
+		@include hover-light();
+	}
+}

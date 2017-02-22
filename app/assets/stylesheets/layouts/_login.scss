@@ -1,0 +1,83 @@
+.login-container{
+	@include total-recipe();
+	@include transparent-back();
+	background-image: url("login-back.jpg");
+	display: flex;
+	align-items: center;
+}
+
+.login-section{
+  border-right: solid black;
+  height: 50%;
+  position: relative;
+	z-index: 2;
+  display: flex;
+  align-items: center;
+	&.signup{
+		border: none;
+	}
+}
+
+.login-form{
+	@include lg{
+		margin-left: 10%;
+	  position: absolute;
+	}
+}
+
+.login-marketing{
+	margin-left: 10%;
+	h2{
+		font-family: $secondary-font-family;
+		font-size: 3rem;
+		font-weight: normal;
+		text-align: center;
+		margin: 0 auto;
+	}
+	a{
+  	border-bottom: .2rem solid transparent;
+  	color: $panther;
+		display: block;
+  	font-size: 3rem;
+		text-align: center;
+  	&:hover{
+  		border-bottom: .2rem solid $panther;
+  	}		
+  	@include lg{
+  		margin-left: 25%;
+  	}
+	}
+}
+
+.login-field, .login-submit{
+	margin-bottom: 2%;	
+	@include lg{
+		margin-left: 20%;
+	}
+	.login-label{
+		color: $panther;
+		font-family: $secondary-font-family;
+		font-size: 2rem;
+		margin: 0;
+	}
+	input[type=submit],
+	input[type=text],
+	input[type=password], 
+	input[type=email] {
+		background-color: rgba(lightgray, .8);
+		border: .3rem solid rgba($panther, .8);
+		margin: 0;
+		padding: .7rem;
+	}
+	.remember-checkbox,
+	.remember-label {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.remember-label{
+		font-size: 1.2rem;
+	}
+	a{
+		@include hover-dark();
+	}
+}
