@@ -50,7 +50,7 @@
     background: white; 
     content: '';
     height: 100%;
-    opacity: .2;
+    opacity: .4;
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -86,5 +86,17 @@
 @mixin hover-light {
   &:hover{
     color: rgba(white, 1);
+  }
+};
+
+// Form Fields
+
+@mixin form-field{
+  background-color: rgba(lightgray, .8);
+  border: .3rem solid rgba($panther, .8);
+  margin: 0;
+  padding: .7rem;
+  &:focus{
+    border: .3rem solid $panther;
   }
 };

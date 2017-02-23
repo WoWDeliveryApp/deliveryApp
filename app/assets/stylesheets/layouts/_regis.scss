@@ -1,0 +1,93 @@
+.regis-recipe {
+	@include total-recipe();
+	@include transparent-back();
+	background-image: url("regis-back.jpg");
+	position: relative;
+	input[type=submit],
+	input[type=text],
+	input[type=password], 
+	input[type=email] {
+		@include form-field();
+		padding: .5rem;
+		&:focus {
+			border: .3rem solid $panther;
+		}
+	}
+}
+
+.regis-form {
+	margin-left: 4.16665%;
+	height: 100%;
+	.regis-field {
+		.regis-label {
+			text-align: center;
+			width: 100%;
+			@include lg {
+				text-align: left;
+				width: 20%;
+			}
+		}
+	}
+}
+
+.regis-container {
+	@include lg {
+		height: 70%;
+		position: absolute;
+		top: 20%;
+	}
+	.regis-title{
+		font-family: $secondary-font-family;
+		font-size: $medium-font-size;
+		font-weight: normal;
+		text-align: center;
+		text-decoration: underline;
+		@include lg {
+			font-size: 1.5rem;
+		}
+		@include xl {
+			font-size: 2rem;
+		}
+	}
+}
+
+.step-container, .regis-logo {
+	margin-left: 10%;
+	margin-bottom: 5%;
+}
+
+.howitworks {
+	@include lg {
+		border-left: solid $panther; 
+		height: 65%;
+	}
+	.regis-logo p {
+		color: $panther;
+		font-family: $secondary-font-family;
+		text-align: center;
+		text-transform: capitalize;
+		@include lg {
+			font-size: 1.5rem;
+		}
+		@include xl {
+			font-size: 2rem;
+		}
+	}
+}
+
+.step-right,
+.step-left {
+	font-size: $medium-font-size;
+	text-align: center;
+	i{
+		font-size: 1.5rem;
+	}
+}
+
+.step-right{
+	float: right;
+}
+
+.step-left{
+	float: left;
+}
