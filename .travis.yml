@@ -2,7 +2,7 @@ language: ruby
 rvm: 
 - 2.3.3
 cache: 
-  bundler
+  - bundler
   directories:
     - "travis_phantomjs"
 before_install:
