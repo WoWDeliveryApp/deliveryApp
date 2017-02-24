@@ -1,7 +1,7 @@
 .home-recipe{
 	@include total-recipe();
 	align-items: center;
-	background-image: url("index/home_back.jpg");
+	background-image: image-url("index/home_back.jpg");
 	display: flex;
 	padding: 0 5%;
 }

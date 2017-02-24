@@ -2,7 +2,7 @@
 	@include total-recipe();
 	@include transparent-back();
 	align-items: center;
-	background-image: url("login-back.jpg");
+	background-image: image-url("login-back.jpg");
 	display: flex;
 }
 

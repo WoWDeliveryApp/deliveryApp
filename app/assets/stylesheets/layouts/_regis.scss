@@ -1,7 +1,7 @@
 .regis-recipe {
 	@include total-recipe();
 	@include transparent-back();
-	background-image: url("regis-back.jpg");
+	background-image: image-url("regis-back.jpg");
 	position: relative;
 	input[type=submit],
 	input[type=text],
