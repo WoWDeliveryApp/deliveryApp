@@ -1,15 +1,25 @@
 language: ruby
 rvm: 
 - 2.3.3
+cache: 
+  bundler
+  directories:
+    - "travis_phantomjs"
 before_install:
- - rvm @global do gem uninstall bundle -x
- - rvm @global do gem install bundler -v 1.13.7
- - bundle --version
+  - rvm @global do gem uninstall bundle -x
+  - rvm @global do gem install bundler -v 1.13.7
+  - bundle --version
+  - "phantomjs --version"
+  - "export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH"
+  - "phantomjs --version"
+  - "if [ $(phantomjs --version) != '2.1.1' ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi"
+  - "if [ $(phantomjs --version) != '2.1.1' ]; then wget https://assets.membergetmember.co/software/phantomjs-2.1.1-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2; fi"
+  - "if [ $(phantomjs --version) != '2.1.1' ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi"
+  - "phantomjs --version"
 script:
   - bundle exec rake db:reset
   - bundle exec rake spec
   - bundle exec rake spinach
-cache: bundler
 services:
   - postgresql
 addons:
