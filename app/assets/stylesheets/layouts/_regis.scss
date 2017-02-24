@@ -37,13 +37,17 @@
 		top: 20%;
 	}
 	.regis-title{
+		border-bottom: .2rem solid $panther;
 		font-family: $secondary-font-family;
 		font-size: $medium-font-size;
 		font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
 		text-align: center;
-		text-decoration: underline;
+		width: 70%;
 		@include lg {
 			font-size: 1.5rem;
+			width: 20%;
 		}
 		@include xl {
 			font-size: 2rem;
@@ -56,10 +60,31 @@
 	margin-bottom: 5%;
 }
 
+.step-container{
+	@include horizontal-line();
+	position: relative;
+	&:before{
+		width: 50%;
+    top: 25%;
+    left: 25%;
+	}
+	&.vertical-line{
+		@include vertical-line;
+		&:after{
+	    height: 45%;
+	    right: 12%;
+	    bottom: -35%;
+		}
+	}
+}
+
 .howitworks {
+	
+	position: relative;
 	@include lg {
 		border-left: solid $panther; 
 		height: 65%;
+		margin-top: -3%;
 	}
 	.regis-logo p {
 		color: $panther;
@@ -90,4 +115,16 @@
 
 .step-left{
 	float: left;
+}
+
+.regis-submit{
+	input[type=submit]{
+		@include form-button();
+		padding: .5rem 1rem;
+	}
+}
+
+.regis-terms{
+	text-align: center;
+  margin: 1% 10%;
 }

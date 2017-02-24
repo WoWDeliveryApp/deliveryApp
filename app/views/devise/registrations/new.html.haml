@@ -28,7 +28,7 @@
               = image_tag 'ToGO jp-b.png'
             .pure-u-3-5
               %p ¿Cómo funciona?
-        .pure-u-4-5.step-container
+        .pure-u-4-5.step-container.vertical-line
           %article.step-left.pure-u-lg-1-4.pure-u-1
             %i.fa.fa-mobile
             %p 1.Ingrese a la App
@@ -38,12 +38,12 @@
             %p 1.Seleccione un restaurante
         .pure-u-4-5.step-container
           %article.step-right.pure-u-lg-1-4.pure-u-1
-            %i.fa-cutlery
+            %i.fa.fa-cutlery
             %p 1.Ordene online
           %article.step-left.pure-u-lg-1-4.pure-u-1
             %i.fa.fa-star
             %p 1.Disfrute su comida
-      %section.pure-u-4-5.pure-u-lg-1-2.regis-section.regis-terms
+      %section.pure-u-4-5.regis-section.regis-terms
         .regis-submit
-          = f.submit "Sign up"
+          = f.submit "Sign up regis-button", :class => "pure-u-4-5 pure-u-lg-2-5"
 

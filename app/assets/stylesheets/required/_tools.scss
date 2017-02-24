@@ -100,3 +100,33 @@
     border: .3rem solid $panther;
   }
 };
+
+@mixin form-button{
+  background-color: $panther;
+  border: .3rem solid $panther;
+  color: white;
+  padding: .7rem;
+  &:hover{
+    background-color: darken($panther, .7);
+    color: rgba(white, .6);
+    transition: all 1s;
+  }
+};
+
+// lines
+
+@mixin horizontal-line{
+  &:before{
+    border-bottom: .2rem dashed $panther;
+    content: '';
+    position: absolute;
+  }
+};
+
+@mixin vertical-line{
+  &:after{
+    border-left: .2rem dashed $panther;
+    content: '';
+    position: absolute;    
+  }
+};

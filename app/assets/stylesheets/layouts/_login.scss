@@ -69,13 +69,13 @@
 			font-size: 2rem;
 		}
 	}
-	input[type=submit],
 	input[type=text],
 	input[type=password], 
 	input[type=email] {
 		@include form-field();
 	}
 	input[type=submit]{
+		@include form-button();
 		@include hover-darkbox();
 	}
 	.remember-checkbox,
