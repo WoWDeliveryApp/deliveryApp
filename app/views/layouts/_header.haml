@@ -14,6 +14,13 @@
 			%a(href="#" title="How it Works?" class="food")
 				%p ¿Necesita Ayuda?
 				%p ¿como funciona?
+		.pure-u-lg-1-3
+			- locale_flag = I18n.locale == :es ? :en : :es
+			= link_to locale_path(locale: locale_flag), method: :post do
+				- if locale_flag == :es
+					= image_tag '', alt: 'Español'
+				- elsif locale_flag == :en
+					= image_tag '', alt: 'English'
 	%nav.menu-right.pure-u-lg-1-4
 		.header-link.pure-u-lg-1-3
 			%a(href="#" title="How it Works?") 

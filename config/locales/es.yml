@@ -19,9 +19,9 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   visitors: 
-    lema: "Delivery at the reach of your hand"
+    lema: "Delivery al alcance de tu mano"
   devise:
     login:
-      registro: Not yet have account? Sign up!
+      registro: No tiene una cuenta? ¡créala!
