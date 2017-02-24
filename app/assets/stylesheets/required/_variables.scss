@@ -6,10 +6,10 @@
        url(font-path('MyriadPro-Regular.eot') + "?#iefix") format('embedded-opentype');
        /*FIXME: Esto esta comentado debido a unos errores que nos da en el servidor*/
        /*al parecer todo esta funcionando asi, pero neceita mejorar*/
-       /*url(font-path('MyriadPro-Regular.woff2')) format('woff2'),*/
-       /*url(font-path('MyriadPro-Regular.woff')) format('woff'),*/
-       /*url(font-path('MyriadPro-Regular.ttf'))  format('truetype'),*/
-       /*url(font-path('MyriadPro-Regular.svg') + "#myriadpro") format('svg');*/
+       url(font-path('MyriadPro-Regular.woff2')) format('woff2'),
+       url(font-path('MyriadPro-Regular.woff')) format('woff'),
+       url(font-path('MyriadPro-Regular.ttf'))  format('truetype'),
+       url(font-path('MyriadPro-Regular.svg') + "#myriadpro") format('svg');
   font-weight: 400;
   font-style: normal;
 }
@@ -19,8 +19,8 @@
   src: url(font-path('belacu/BELACU.eot'));
   src: url(font-path('belacu/BELACU.eot')),
        url(font-path('belacu/BELACU.eot') + "?#iefix") format('embedded-opentype'),
-       /*url(font-path('belacu/BELACU.woff2')) format('woff2'),*/
-       /*url(font-path('belacu/BELACU.woff')) format('woff'),*/
+       url(font-path('belacu/BELACU.woff2')) format('woff2'),
+       url(font-path('belacu/BELACU.woff')) format('woff'),
        url(font-path('belacu/BELACU.ttf'))  format('truetype'),
        url(font-path('belacu/BELACU.svg') + "#belacu") format('svg');
   font-weight: 700;
