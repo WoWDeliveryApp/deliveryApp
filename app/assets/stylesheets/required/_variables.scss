@@ -4,6 +4,8 @@
   src: url(font-path('MyriadPro-Regular.eot'));
   src: url(font-path('MyriadPro-Regular.eot')),
        url(font-path('MyriadPro-Regular.eot') + "?#iefix") format('embedded-opentype');
+       /*FIXME: Esto esta comentado debido a unos errores que nos da en el servidor*/
+       /*al parecer todo esta funcionando asi, pero neceita mejorar*/
        /*url(font-path('MyriadPro-Regular.woff2')) format('woff2'),*/
        /*url(font-path('MyriadPro-Regular.woff')) format('woff'),*/
        /*url(font-path('MyriadPro-Regular.ttf'))  format('truetype'),*/
