@@ -76,7 +76,6 @@
 	}
 	input[type=submit]{
 		@include form-button();
-		@include hover-darkbox();
 	}
 	.remember-checkbox,
 	.remember-label {
