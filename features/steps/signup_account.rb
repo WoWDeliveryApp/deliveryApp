@@ -11,7 +11,7 @@ class Spinach::Features::SignupAccount < Spinach::FeatureSteps
   end
 
   step 'I click Sign up' do
-    click_button 'Sign up'
+    find('input[name="commit"]').click
   end
 
   step 'I should see a message that field address can\'t be blank' do

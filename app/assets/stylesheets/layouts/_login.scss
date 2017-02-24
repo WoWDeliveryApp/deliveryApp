@@ -1,20 +1,26 @@
 .login-container{
 	@include total-recipe();
 	@include transparent-back();
+	align-items: center;
 	background-image: url("login-back.jpg");
 	display: flex;
-	align-items: center;
 }
 
 .login-section{
-  border-right: solid black;
-  height: 50%;
-  position: relative;
-	z-index: 2;
-  display: flex;
-  align-items: center;
+		margin-left: 10%;
+		z-index: 2;
+	@include lg{
+	  align-items: center;
+	  border-right: solid $panther;
+	  display: flex;
+	  height: 50%;
+	  margin-left: 0;
+	  position: relative;
+	}
 	&.signup{
-		border: none;
+		@include lg{
+			border: none;
+		}
 	}
 }
 
@@ -26,24 +32,25 @@
 }
 
 .login-marketing{
-	margin-left: 10%;
 	h2{
 		font-family: $secondary-font-family;
-		font-size: 3rem;
 		font-weight: normal;
 		text-align: center;
 		margin: 0 auto;
+		@include lg{
+			font-size: 3rem;
+		}
 	}
 	a{
   	border-bottom: .2rem solid transparent;
   	color: $panther;
 		display: block;
-  	font-size: 3rem;
 		text-align: center;
   	&:hover{
   		border-bottom: .2rem solid $panther;
   	}		
   	@include lg{
+  		font-size: 3rem;
   		margin-left: 25%;
   	}
 	}
@@ -57,17 +64,18 @@
 	.login-label{
 		color: $panther;
 		font-family: $secondary-font-family;
-		font-size: 2rem;
 		margin: 0;
+		@include lg{
+			font-size: 2rem;
+		}
 	}
-	input[type=submit],
 	input[type=text],
 	input[type=password], 
 	input[type=email] {
-		background-color: rgba(lightgray, .8);
-		border: .3rem solid rgba($panther, .8);
-		margin: 0;
-		padding: .7rem;
+		@include form-field();
+	}
+	input[type=submit]{
+		@include form-button();
 	}
 	.remember-checkbox,
 	.remember-label {
