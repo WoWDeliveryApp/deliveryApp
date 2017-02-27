@@ -92,6 +92,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
+    choice (0.2.0)
     chromedriver-helper (1.0.0)
       archive-zip (~> 0.7.0)
       nokogiri (~> 1.6)
@@ -108,6 +109,11 @@ GEM
     concurrent-ruby (1.0.4)
     connection_pool (2.2.0)
     cookiejar (0.3.3)
+    countries (2.0.7)
+      i18n_data (~> 0.7.0)
+      money (~> 6.7)
+      sixarm_ruby_unaccent (~> 1.1)
+      unicode_utils (~> 1.4)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     daemons (1.2.4)
@@ -163,6 +169,8 @@ GEM
     foundation-rails (6.1.2.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
+    geo_ip (0.6.2)
+      rest-client (~> 1.6)
     gherkin-ruby (0.3.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -203,6 +211,7 @@ GEM
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    i18n_data (0.7.0)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
       has_scope (~> 0.6.0.rc)
@@ -254,6 +263,9 @@ GEM
     mime-types (2.99.3)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    money (6.8.1)
+      i18n (>= 0.6.4, <= 0.7.0)
+      sixarm_ruby_unaccent (>= 1.1.1, < 2)
     multi_json (1.12.1)
     nenv (0.3.0)
     netrc (0.11.0)
@@ -317,6 +329,11 @@ GEM
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6)
       rails-deprecated_sanitizer (>= 1.0.1)
+    rails-erd (1.5.0)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -378,6 +395,7 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-graphviz (1.2.2)
     ruby-progressbar (1.8.1)
     ruby_dep (1.5.0)
     ruby_parser (3.8.4)
@@ -418,6 +436,7 @@ GEM
       simplecov
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
+    sixarm_ruby_unaccent (1.1.1)
     skylight (1.0.1)
       activesupport (>= 3.0.0)
     skywalker (2.2.0)
@@ -470,6 +489,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unicode-display_width (1.1.3)
+    unicode_utils (1.4.0)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -500,6 +520,7 @@ DEPENDENCIES
   byebug
   capybara
   chromedriver-helper
+  countries
   database_cleaner
   devise
   factory_girl_rails
@@ -508,6 +529,7 @@ DEPENDENCIES
   font-awesome-sass
   foundation-icons-sass-rails
   foundation-rails (~> 6.1.2.0)
+  geo_ip
   gravtastic
   guard
   guard-livereload
@@ -528,6 +550,7 @@ DEPENDENCIES
   rack-mini-profiler
   rack-timeout
   rails (= 4.2.7.1)
+  rails-erd
   rails_12factor
   rainbow (>= 2.1.0, < 2.2.0)
   rollbar

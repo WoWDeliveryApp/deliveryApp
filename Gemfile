@@ -20,6 +20,10 @@ gem 'sidekiq'        # background jobs
 gem 'puma' # webserver
 gem 'skywalker'
 
+# Set language by country
+gem 'geo_ip'
+gem 'countries'
+
 ## Asset bits
 gem 'therubyracer'
 gem 'haml'
@@ -51,6 +55,7 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'web-console', '~> 2.0'
+  gem 'rails-erd' # Gerenate a database graph
 end
 
 group :development, :test do
