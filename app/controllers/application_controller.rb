@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale_by_region
 
   def set_locale_by_region
-    unless session[:visitor_set_locale]
+    unless session[:visitor_set_locale] or Rails.env.test?
       user_ip = request.remote_ip
       begin
         country_code = GeoIp.geolocation(user_ip)[:country_code]

@@ -1,6 +1,6 @@
 # Traducciones adicionales en https://github.com/plataformatec/devise/wiki/I18n
 # Fake english devise notice just for tests, it should be es/es.
-en:
+es:
   devise:
     confirmations:
       confirmed: "Tu correo electrónico ha sido confirmado exitosamente."
@@ -60,3 +60,10 @@ en:
       not_saved:
         one: "Ha ocurrido 1 error:"
         other: "Han ocurrido %{count} errores:"
+  form:
+    user:
+      name: 'Nombre'
+      password: 'Contraseña'
+      placeholder: 'Minimo 6 caracteres'
+      password_confirmation: 'Confirmar contraseña'
+      address: 'Direccion'

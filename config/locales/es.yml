@@ -24,4 +24,19 @@ es:
     lema: "Delivery al alcance de tu mano"
   devise:
     login:
-      registro: No tiene una cuenta? ¡créala!
+      registro: 'No tiene una cuenta? ¡créala!'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            address:
+              blank: 'no puede estar vacio'
+            email:
+              blank: 'no puede estar vacio'
+              taken: 'ya en uso'
+            password:
+              blank: 'no puede estar vacio'
+              too_short: 'muy corta'
+            password_confirmation:
+              confirmation: 'no coinciden'

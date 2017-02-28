@@ -25,3 +25,17 @@ en:
   devise:
     login:
       registro: Not yet have account? Sign up!
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            address:
+              blank: 'no puede estar vacio'
+            email:
+              blank: 'no puede estar vacio'
+              taken: 'ya en uso'
+            password:
+              blank: 'no puede estar vacio'
+            password_confirmation:
+              confirmation: 'no coinciden'

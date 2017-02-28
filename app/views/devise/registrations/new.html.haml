@@ -1,32 +1,49 @@
-%h2 Sign up
-#errors
-#new-user
-  = form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true) do |f|
-    = devise_error_messages!
-    .field
-      = f.label :name
-      %br/
-      = f.text_field :name, autofocus: true
-    .field
-      = f.label :email
-      %br/
-      = f.email_field :email
-    .field
-      = f.label :password
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} characters minimum)
-      %br/
-      = f.password_field :password, autocomplete: "off"
-    .field
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "off"
-    .field
-      = f.label :address
-      %br/
-      = f.text_field :address
-    .actions
-      = f.submit "Sign up"
-  = render "devise/shared/links"
+.pure-g.pure-u-1.regis-recipe
+  .pure-u-1.regis-container.bring-front
+    .pure-u-1-2
+      %h2.regis-title Sign up
+    #errors
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true,  :html => {:class => "regis-form pure-u-22-24 pure-form pure-form-aligned"}) do |f|
+      = devise_error_messages!
+      %section.pure-u-1.pure-u-lg-1-2
+        .regis-field.pure-control-group
+          = f.label :name, t('form.user.name'), :class => "regis-label"
+          = f.text_field :name, autofocus: true, :class => "pure-u-1 pure-u-lg-3-5 regis-input"
+        .regis-field.pure-control-group
+          = f.label :email, :class => "regis-label"
+          = f.email_field :email, :class => "pure-u-1 pure-u-lg-3-5 regis-input"
+        .regis-field.pure-control-group
+          = f.label :password, t('form.user.password'), :class => "regis-label"
+          = f.password_field :password, autocomplete: "off", placeholder: t('form.user.placeholder'), :class => "pure-u-1 pure-u-lg-3-5 regis-input" 
+        .regis-field.pure-control-group
+          = f.label :password_confirmation, t('form.user.password_confirmation'), :class => "regis-label"
+          = f.password_field :password_confirmation, autocomplete: "off", :class => "pure-u-1 pure-u-lg-3-5 regis-input"
+        .regis-field.pure-control-group
+          = f.label :address, t('form.user.address'), :class => "regis-label"
+          = f.text_field :address, :class => "pure-u-1 pure-u-lg-3-5 regis-input"
+      %section.pure-u-4-5.pure-u-lg-11-24.regis-section.howitworks
+        .regis-logo.pure-u-lg-4.5
+          = link_to root_path do
+            .pure-u-lg-1-5
+              = image_tag 'ToGO jp-b.png'
+            .pure-u-3-5
+              %p ¿Cómo funciona?
+        .pure-u-4-5.step-container.vertical-line
+          %article.step-left.pure-u-lg-1-4.pure-u-1
+            %i.fa.fa-mobile
+            %p 1.Ingrese a la App
+          %article.step-right.pure-u-lg-1-4.pure-u-1
+            %i.fa.fa-bars
+            %i.fa.fa-hand-pointer-o
+            %p 1.Seleccione un restaurante
+        .pure-u-4-5.step-container
+          %article.step-right.pure-u-lg-1-4.pure-u-1
+            %i.fa.fa-cutlery
+            %p 1.Ordene online
+          %article.step-left.pure-u-lg-1-4.pure-u-1
+            %i.fa.fa-star
+            %p 1.Disfrute su comida
+      %section.pure-u-4-5.regis-section.regis-terms
+        .regis-submit
+          = f.submit "Sign up", :class => "pure-u-4-5 pure-u-lg-1-5"
 
